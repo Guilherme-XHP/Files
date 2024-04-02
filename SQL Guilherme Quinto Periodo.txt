@@ -1,0 +1,58 @@
+--hotel, quarto, conta, hospede, funcionario, tipo de quarto, reserva
+
+create table Funcionario(
+  cod_funcio int,
+  name varchar(64),
+  cpf varchar(14),
+  age int,
+  cargo varchar(100),
+  salario decimal(10,2)
+);
+
+create table Hospede(
+  cod_hosp int,
+  name varchar(64),
+  cpf varchar(14),
+  age int
+);
+
+create table Quarto(
+  cod_quarto int,
+  tipo_quarto varchar(500),
+  valor decimal(10,2)
+);
+
+create table Reserva(
+  cod_reserva int,
+  cod_quarto int,
+  cod_hosp int,
+  data date,
+  conta decimal(10,2)
+);
+
+create table Hotel(
+  cod_hotel int,
+  cod_quarto int,
+  cod_hosp int,
+  cod_funcio int,
+  localizacao varchar(500),
+  nome varchar(64)
+);
+
+insert into Funcionario (cod_funcio, name, cpf, age, cargo, salario)
+values (1, 'Marcos Vinicius', '000.000.000-01', 29, 'Recepcao', 1600.00);
+
+insert into Hospede (cod_hosp, name, cpf, age)
+values (1, 'Sergio Arantes', '000.000.000-02', 19);
+
+insert into Quarto (cod_quarto, tipo_quarto, valor)
+values (1, 'Comum', 200.00);
+
+insert into Quarto (cod_quarto, tipo_quarto, valor)
+values (2, 'Vip', 350.00);
+
+insert into Hotel (cod_hotel, cod_quarto, cod_hosp, cod_funcio, localizacao, nome)
+values (1, 1 ,1 ,1 ,'Rua 21 c/Av 43 Nº5675' , 'Hotel Pipocas');
+
+insert into Reserva (cod_reserva, cod_quarto, cod_hosp, data, conta)
+values (1, 2, ,1 , '04/23/2024', 1350.00)
