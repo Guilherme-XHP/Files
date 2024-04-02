@@ -55,4 +55,4 @@ insert into Hotel (cod_hotel, cod_quarto, cod_hosp, cod_funcio, localizacao, nom
 values (1, 1 ,1 ,1 ,'Rua 21 c/Av 43 Nº5675' , 'Hotel Pipocas');
 
 insert into Reserva (cod_reserva, cod_quarto, cod_hosp, data, conta)
-values (1, 2, ,1 , '04/23/2024', 1350.00)
+values (1, 2, 1 , '04/23/2024', 1350.00);
