@@ -1,0 +1,36 @@
+create table Cliente(
+  cod_cliente int,
+  nome varchar(64),
+  cpf varchar(14),
+  endereco varchar(100),
+  idade int,
+  numero varchar(11)
+);
+
+create table Produto(
+  cod_prod int,
+  nome_prod varchar(64),
+  desc_prod varchar(256),
+  tipo_prod varchar(64),
+  valor_prod decimal(10,2)
+);
+
+create table Forma_Pagamento(
+  cod_forma_pag int,
+  descricao varchar(64)
+);
+
+create table Pagamento(
+  cod_pagamento int,
+  cod_forma_pag int,
+  cod_cliente int
+);
+
+create table Venda(
+  cod_venda int,
+  cod_cliente int,
+  cod_prod int,
+  cod_pagamento int
+  valor_carrinho decimal
+);
+
