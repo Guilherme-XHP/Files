@@ -1,0 +1,35 @@
+create table Medico(
+  cod_med int,
+  nome varchar(98),
+  cargo varchar(98)
+);
+
+create table Paciente(
+  cod_pac int,
+  nome varchar(98),
+  cpf varchar(98),
+  idade int,
+  data_nas date,
+  sus_num int
+);
+
+create table Medicamento(
+  cod_medic int,
+  tipo varchar(98),
+  tarja varchar(98)
+);
+
+create table Consulta(
+  cod_cons int,
+  cod_med int,
+  cod_pac int,
+  horario_cons varchar(32),
+  data_cons date
+);
+
+create table Prescricao(
+  cod_presc int,
+  cod_med int,
+  cod_medic int,
+  motivo varchar(256)
+);
