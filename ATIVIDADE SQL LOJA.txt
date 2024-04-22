@@ -1,3 +1,7 @@
+drop table Customers;
+drop table Orders;
+drop table Shippings;
+
 create table Cliente(
   cod_cliente int,
   nome varchar(64),
