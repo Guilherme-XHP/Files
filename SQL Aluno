@@ -1,1 +1,7 @@
+drop table Customers;
+drop table Orders;
+drop table Shippings;
 
+create table Aluno(
+  cod_aluno int
+);
