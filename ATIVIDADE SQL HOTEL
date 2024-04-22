@@ -1,5 +1,9 @@
 --hotel, quarto, conta, hospede, funcionario, tipo de quarto, reserva
 
+drop table Customers;
+drop table Orders;
+drop table Shippings;
+
 create table Funcionario(
   cod_funcio int,
   name varchar(64),
