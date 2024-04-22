@@ -33,3 +33,19 @@ create table Prescricao(
   cod_medic int,
   motivo varchar(256)
 );
+
+insert into Medico(cod_med, nome, cargo)
+values
+(1, 'Marcelo Rezende', 'Utologista'),
+(2, 'Dateta', 'Otorinolaringologista'),
+(3, 'Luiz Bati', 'Infectologista'),
+(4, 'Nilce Moreto', 'Ginecologista'),
+(5, 'Willian Bonner', 'Cardiologista')
+
+insert into Paciente(cod_pac, nome, cpf, idade, data_nas, sus_num)
+values
+(1, 'Adolfo Block', '510.694.152-98', 51, 04/25/1961, 987452132512),
+(2, 'Marcos Mion', '354.154.985-12', 35, 10/10/1984, 65798132457),
+(3, 'Joao Abidala', '125.987.621-45', 55, 06/15/1972, 132489413211),
+(4, 'Maria Carreta', '510.694.152-98', 34, 12/14/1990, 9874546546568),
+(5, 'Leandro Marcos', '510.694.152-98', 25, 05/01/1989, 9874521997987),
