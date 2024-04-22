@@ -1,4 +1,6 @@
-
+drop table Customers;
+drop table Orders;
+drop table Shippings;
 
 create table Medico(
   cod_med int,
