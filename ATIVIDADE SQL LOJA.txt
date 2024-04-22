@@ -30,11 +30,11 @@ create table Venda(
   cod_venda int,
   cod_cliente int,
   cod_prod int,
-  cod_pagamento int
+  cod_pagamento int,
   valor_carrinho decimal
 );
 
-insert into Cliente(cod_cliente, name, cpf, endereco, idade, numero)
+insert into Cliente(cod_cliente, nome, cpf, endereco, idade, numero)
 values
 (1 ,'Marcelo Drops', '516.394.261-16', 'Rua 34 c/Av 56 Nº564', 32, '99657-9284'),
 (2 ,'Felipe Smit', '384.492.145-46', 'Rua 61 c/Av 56 Nº564', 25, '99657-9284'),
