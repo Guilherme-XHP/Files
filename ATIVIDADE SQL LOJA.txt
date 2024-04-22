@@ -34,7 +34,7 @@ create table Venda(
   valor_carrinho decimal
 );
 
-insert into Cliente (cod_cliente, name, cpf, endereco, idade, numero)
+insert into Cliente(cod_cliente, name, cpf, endereco, idade, numero)
 values
 (1 ,'Marcelo Drops', '516.394.261-16', 'Rua 34 c/Av 56 Nº564', 32, '99657-9284'),
 (2 ,'Felipe Smit', '384.492.145-46', 'Rua 61 c/Av 56 Nº564', 25, '99657-9284'),
@@ -44,4 +44,32 @@ values
 
 insert into Produto (cod_prod, nome_prod, desc_prod, tipo_prod, valor_prod)
 values
-(1 , '', , , ),
+(1 , 'Teclado mecanico Gaymer', 'Teclado Mecanico Gaymer - kcos85743 60%', 'Teclado', 139.99),
+(2 , 'Monitor Gaymer', 'Monitor Gaymer p0o9i8-u7y6t5 21.5 polegadas', 'Monitor', 469.99),
+(3 , 'Teclado mecanico', 'Teclado Mecanico 100%', 'Teclado', 199.99),
+(4 , 'Pc Gaymer', 'Pc Msjhfbh i50-8574637k, rtx 9760 super ti xt, 3.14159gb Ram', 'Pc', 8639.99),
+(5 , 'Mouse Gaymer', 'Mouse Gaymer lkjhgvf 90684DPI', 'Mouse', 305.99);
+
+insert into Forma_Pagamento (cod_forma_pag, descricao)
+values
+(1, 'CuPix'),
+(2, 'Bocheque'),
+(3, 'Cartao de Cus'),
+(4, 'Boleto de tobas'),
+(5, 'Xerecard');
+
+insert into Pagamento (cod_pagamento, cod_forma_pag, cod_cliente)
+values
+(1 , 1, 4),
+(4 , 3, 5),
+(2 , 5, 2),
+(5 , 2, 3),
+(3 , 4, 1);
+
+insert into Venda (cod_venda, cod_cliente, cod_prod, cod_pagamento, valor_carrinho)
+values
+(1, 4, 2, 4, 951.20),
+(3, 5, 3, 1, 231.20),
+(5, 1, 4, 2, 504.20),
+(2, 2, 5, 5, 435.20),
+(4, 3, 1, 3, 234.20);
