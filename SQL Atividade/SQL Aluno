@@ -27,6 +27,38 @@ create table Disciplina(
   carga_hor varchar(32),
   tipo_curso varchar(98)
  );
+ 
+insert into Aluno(cod_alu, nome, idade)
+values
+(1, 'Jose Roberto', 18),
+(2, 'Marcela Soares', 19),
+(3, 'Leando Mello', 21),
+(4, 'Rosevalda Turbando', 56),
+(5, 'Tomas Turbando', 25);
+
+insert into Matricula(cod_mat, cod_alu, cod_curso, nome_alu, num_mat)
+values
+(1, 3, 2, 'Leandro Mello', 6958496),
+(2, 4, 1, 'Rosevalda Turbando', 2158965),
+(3, 1, 3, 'Jose Roberto', 2569842),
+(4, 2, 4, 'Marcela Soares', 3495621),
+(5, 5, 5, 'Tomas Turbando', 65795432);
+
+insert into Curso(cod_curso, tipo)
+values
+(1, 'Psicologia'),
+(2, 'Biologia'),
+(3, 'Matematica'),
+(4, 'Direiro'),
+(5, 'Engenharia Da Computacao');
+
+insert into Disciplina(cod_dis, cod_curso, carga_hor, tipo_curso)
+values
+(1, 1, '2.900 horas', 'Psicologia'),
+(2, 2, '3.200 horas', 'Biologia'),
+(3, 3, '3.360 horas', 'Matematia'),
+(4, 4, '3.700 horas', 'Direito'),
+(5, 5, '3.600 horas', 'Engenharia Da Computacao');
 
 select * from Aluno;
 select * from Matricula;
