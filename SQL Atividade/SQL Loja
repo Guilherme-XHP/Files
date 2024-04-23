@@ -1,0 +1,85 @@
+drop table Customers;
+drop table Orders;
+drop table Shippings;
+
+create table Cliente(
+  cod_cliente int,
+  nome varchar(64),
+  cpf varchar(14),
+  endereco varchar(100),
+  idade int,
+  numero varchar(11)
+);
+
+create table Produto(
+  cod_prod int,
+  nome_prod varchar(64),
+  desc_prod varchar(256),
+  tipo_prod varchar(64),
+  valor_prod decimal(10,2)
+);
+
+create table Forma_Pagamento(
+  cod_forma_pag int,
+  descricao varchar(64)
+);
+
+create table Pagamento(
+  cod_pagamento int,
+  cod_forma_pag int,
+  cod_cliente int
+);
+
+create table Venda(
+  cod_venda int,
+  cod_cliente int,
+  cod_prod int,
+  cod_pagamento int,
+  valor_carrinho decimal
+);
+
+insert into Cliente(cod_cliente, nome, cpf, endereco, idade, numero)
+values
+(1 ,'Marcelo Drops', '516.394.261-16', 'Rua 34 c/Av 56 Nº564', 32, '99657-9284'),
+(2 ,'Felipe Smit', '384.492.145-46', 'Rua 61 c/Av 56 Nº564', 25, '99657-9284'),
+(3 ,'Darius Ferreia', '264.921.462-91', 'Rua 32 c/Av 56 Nº564', 30, '99657-9284'),
+(4 ,'Leandra Guedes', '246.315.136-69', 'Rua 51 c/Av 56 Nº564', 19, '99657-9284'),
+(5 ,'Ana Bele', '354.156.798.61', 'Rua 13 c/Av 56 Nº564', 26, '99657-9284');
+
+insert into Produto(cod_prod, nome_prod, desc_prod, tipo_prod, valor_prod)
+values
+(1 , 'Teclado mecanico Gaymer', 'Teclado Mecanico Gaymer - kcos85743 60%', 'Teclado', 139.99),
+(2 , 'Monitor Gaymer', 'Monitor Gaymer p0o9i8-u7y6t5 21.5 polegadas', 'Monitor', 469.99),
+(3 , 'Teclado mecanico', 'Teclado Mecanico 100%', 'Teclado', 199.99),
+(4 , 'Pc Gaymer', 'Pc Msjhfbh i50-8574637k, rtx 9760 super ti xt, 3.14159gb Ram', 'Pc', 8639.99),
+(5 , 'Mouse Gaymer', 'Mouse Gaymer lkjhgvf 90684DPI', 'Mouse', 305.99);
+
+insert into Forma_Pagamento(cod_forma_pag, descricao)
+values
+(1, 'CuPix'),
+(2, 'Bocheque'),
+(3, 'Cartao de Cus'),
+(4, 'Boleto de tobas'),
+(5, 'Xerecard');
+
+insert into Pagamento(cod_pagamento, cod_forma_pag, cod_cliente)
+values
+(1 , 1, 4),
+(2 , 3, 5),
+(3 , 5, 2),
+(4 , 2, 3),
+(5 , 4, 1);
+
+insert into Venda(cod_venda, cod_cliente, cod_prod, cod_pagamento, valor_carrinho)
+values
+(1, 4, 2, 4, 951.20),
+(2, 5, 3, 1, 231.20),
+(3, 1, 4, 2, 504.20),
+(4, 2, 5, 5, 435.20),
+(5, 3, 1, 3, 234.20);
+
+select * from Cliente;
+select * from Produto;
+select * from Forma_Pagamento;
+select * from Produto;
+select * from Venda;
