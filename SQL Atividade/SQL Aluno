@@ -25,4 +25,10 @@ create table Disciplina(
   cod_dis int,
   cod_curso int,
   carga_hor varchar(32),
-  tipo_curso varcha
+  tipo_curso varchar(98)
+ );
+
+select * from Aluno;
+select * from Matricula;
+select * from Curso;
+select * from Disciplina;
