@@ -3,5 +3,26 @@ drop table Orders;
 drop table Shippings;
 
 create table Aluno(
-  cod_aluno int
+  cod_alu int,
+  nome varchar(98),
+  idade int
 );
+ 
+create table Matricula(
+  cod_mat int,
+  cod_alu int,
+  cod_curso int,
+  nome_alu varchar(98),
+  num_mat int
+);
+
+create table Curso(
+  cod_curso int,
+  tipo varchar(98)
+);
+
+create table Disciplina(
+  cod_dis int,
+  cod_curso int,
+  carga_hor varchar(32),
+  tipo_curso varcha
