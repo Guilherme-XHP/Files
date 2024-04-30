@@ -2,41 +2,50 @@ drop table Customers;
 drop table Orders;
 drop table Shippings;
 
-create table Cliente(
-  cod_cliente int,
-  nome varchar(64),
-  cpf varchar(14),
-  endereco varchar(100),
-  idade int,
-  numero varchar(11)
+CREATE DATABASE aula1
+USE aula1
+
+CREATE TABLE Cliente(
+  cod_cliente INT PRIMARY KEY,
+  nome VARCHAR(64),
+  cpf VARCHAR(14),
+  endereco VARCHAR(100),
+  idade INT,
+  numero VARCHAR(11)
 );
 
-create table Produto(
-  cod_prod int,
-  nome_prod varchar(64),
-  desc_prod varchar(256),
-  tipo_prod varchar(64),
-  valor_prod decimal(10,2)
+CREATE TABLE Produto(
+  cod_prod INT PRIMARY KEY,
+  nome_prod VARCHAR(64),
+  desc_prod VARCHAR(256),
+  tipo_prod VARCHAR(64),
+  valor_prod DECIMAL(10,2)
 );
 
-create table Forma_Pagamento(
-  cod_forma_pag int,
-  descricao varchar(64)
+CREATE TABLE Forma_Pagamento(
+  cod_forma_pag INT PRIMARY KEY,
+  descricao VARCHAR(64)
 );
 
-create table Pagamento(
-  cod_pagamento int,
-  cod_forma_pag int,
-  cod_cliente int
+CREATE TABLE Pagamento(
+  cod_pagamento INT PRIMARY KEY,
+  cod_forma_pag INT,
+  cod_cliente INT,
+  FOREIGN KEY (cod_forma_pag) REFERENCES Forma_Pagamento(cod_forma_pag),
+  FOREIGN KEY (cod_cliente) REFERENCES Cliente(cod_cliente)
 );
 
-create table Venda(
-  cod_venda int,
-  cod_cliente int,
-  cod_prod int,
-  cod_pagamento int,
-  valor_carrinho decimal
+CREATE TABLE Venda(
+  cod_venda INT PRIMARY KEY,
+  cod_cliente INT,
+  cod_prod INT,
+  cod_pagamento INT,
+  valor_carrinho DECIMAL(10,2),
+  FOREIGN KEY (cod_cliente) REFERENCES Cliente(cod_cliente),
+  FOREIGN KEY (cod_prod) REFERENCES Produto(cod_prod),
+  FOREIGN KEY (cod_pagamento) REFERENCES Pagamento(cod_pagamento)
 );
+
 
 insert into Cliente(cod_cliente, nome, cpf, endereco, idade, numero)
 values
