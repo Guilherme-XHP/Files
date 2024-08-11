@@ -5,18 +5,17 @@ function scr_collision(){
 		while !place_meeting(x + sign(h_spd), y, obj_collision){
 			x += sign(h_spd)
 		}
-		h_spd = 0
+		h_spd = 0;
 	}
-	x += h_spd
+	x += h_spd;
 	
 	//Y
 	if place_meeting(x, y + v_spd, obj_collision){
 		while !place_meeting(x, y + sign(v_spd), obj_collision){
-			y += sign(v_spd)
+			y += sign(v_spd);
 		}
-		v_spd = 0
-		can_jump = true;
+		v_spd = 0;
 	}
-	y += v_spd
+	y += v_spd;
 	
 }

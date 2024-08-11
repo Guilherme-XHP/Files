@@ -1,6 +1,9 @@
 function scr_player(){
 	
+	#region main code
 	scr_input();
+
+	var _jump = place_meeting(x, y + v_spd, obj_collision)
 
 	var _move = key_right - key_left  
 	
@@ -16,12 +19,22 @@ function scr_player(){
 	}
 	
 	scr_collision();
-	  
-	 if key_jump{
-		if can_jump{
-			v_spd = -10;
-			can_jump = false;
-		}
+	
+	scr_player_anim();
+	
+	#endregion
+	
+	#region test 
+	
+	#endregion
+	if _jump{
+		can_jump = true;
+	}
+	
+	if key_jump{
+		states = "jump";
+		v_spd = -10;
+		can_jump = false;
 	 }
 	 
 }
