@@ -1,0 +1,43 @@
+create database atv1
+use atv1
+
+create table Funcionario(
+	
+	cod int primary key,
+	nome varchar(50),
+	data_nasc date,
+	cpf varchar(30),
+	cidade varchar(30),
+	sexo varchar(1),
+	salario decimal(10,2)
+
+)
+
+insert into Funcionario(nome, data_nasc, cpf, sexo, cidade, salario)
+values
+('Richard M. Rathjen', 1956/04/26, '83784250025', 'M', 'Manaus', 3500.00 ),
+('Betty F. Blanco', 1988/12/12, '8257830040', 'F', 'Itaúna', 1200.00 ),
+('Brett W. Thomas', 1940/03/01, null, 'M', 'Manaus', 964.00 ),
+('Harold A. Quinn', 06/11/2000, '65391651026', 'M', 'Manaus', 1200.00 ),
+('Dominic E. White', 1999/02/27, null, 'M', 'Manaus', 4300.00 ),
+('Christine H. Corey ', 1980/04/13, '97573734000', 'F','São Paulo', 5973.00 ),
+('Harry C. Woodall', 1992/09/11, null, 'M', 'Itaúna', 3156.00 )
+
+/* Comentario
+select * from Categoria
+update Categoria set nome = 'teste' where cod = 2
+delete from Categoria where cod = 1
+insert into Caterogia (nome) values ('Esportes')
+*/
+
+
+select sexo = 'F' from Funcionario --nn sei se e assim (tenho que testar)
+select cpf = null from Funcionario --nn sei se e assim (tenho que testar)
+update Funcionario set cpf = 'Entrar em Contato' where cpf = null
+delete from Funcionario where cod = 4
+
+
+
+
+/*
+*/
